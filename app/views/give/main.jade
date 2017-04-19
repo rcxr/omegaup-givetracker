@@ -1,0 +1,38 @@
+extends ../base.jade
+
+block content
+  h3 Dashboard
+
+  a(href="/books/add", class='btn btn-success btn-sm')
+    i.glyphicon.glyphicon-plus
+    span  Add book
+
+//
+  <script src="http://code.jquery.com/jquery-git.js"></script>
+
+  <a href="https://microsoft.benevity.org/volunteer/external/track">Track</a>
+  <a href="https://microsoft.benevity.org/volunteer/export/my-history/2017">Get Report</a>
+
+  <input type="file" id="csvInput" name="csv" />
+
+  <script>
+    if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
+      alert("The File APIs are not fully supported in this browser. :(");
+    }
+
+    function handler(evt) {
+      var file = evt.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        alert("test");
+        document.write(reader.result);
+      };
+
+      // Read in the image file as a data URL.
+      reader.readAsText(file);
+    };
+
+    $("#csvInput").on("change", handler);
+  </script>
+
+  // alert(new Date(1489647600 * 1000).toString());

@@ -1,0 +1,10 @@
+.navbar-logo {
+  float: left;
+  line-height: 40px;
+  padding: 5px;
+}
+
+.navbar-logo img {
+  height: 40px;
+  vertical-align: middle;
+}
