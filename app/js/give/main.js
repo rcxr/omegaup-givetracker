@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 
 function getModel () {
-  return require(`../model-${require('../../config').get('DATA_BACKEND')}`);
+  return require("../model-datastore");
 }
 
 const router = express.Router();
@@ -14,7 +14,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 // Set Content-Type for all responses for these routes
 router.use((req, res, next) => {
-  res.set('Content-Type', 'text/html');
+  res.set("Content-Type", "text/html");
   next();
 });
 
@@ -23,8 +23,8 @@ router.use((req, res, next) => {
  *
  * Renders the Give dashboard.
  */
-router.get('/', (req, res, next) => {
-  res.render('give/main.jade', {});
+router.get("/", (req, res, next) => {
+  res.render("give/main.jade", {});
 });
 
 /**
