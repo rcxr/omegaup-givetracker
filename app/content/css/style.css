@@ -8,3 +8,17 @@
   height: 40px;
   vertical-align: middle;
 }
+
+#volunteer-report-picker {
+  display: none;
+}
+
+#volunteer-info.jumbotron {
+  margin: 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.glyphicon-heart {
+  color: red;
+}
