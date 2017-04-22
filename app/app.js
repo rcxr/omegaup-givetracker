@@ -8,7 +8,7 @@ const app = express();
 
 app.disable("etag");
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "jade");
+app.set("view engine", "pug");
 app.set("trust proxy", true);
 
 // Redirect root to /give
@@ -36,7 +36,7 @@ if (module === require.main) {
   // Start the server
   const server = app.listen(config.get("PORT"), () => {
     const port = server.address().port;
-    console.log("App listening on port ${port}");
+    console.log(`App listening on port ${port}`);
   });
 }
 

@@ -24,7 +24,7 @@ router.use((req, res, next) => {
  * Renders the Give dashboard.
  */
 router.get("/", (req, res, next) => {
-  res.render("give/main.jade", {});
+  res.render("give/main.pug", {});
 });
 
 /**

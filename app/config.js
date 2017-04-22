@@ -27,6 +27,6 @@ checkConfig("GCLOUD_PROJECT");
 
 function checkConfig (setting) {
   if (!nconf.get(setting)) {
-    throw new Error("You must set ${setting} as an environment variable or in config.json!");
+    throw new Error(`You must set ${setting} as an environment variable or in config.json!`);
   }
 }
