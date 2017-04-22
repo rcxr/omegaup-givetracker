@@ -1,11 +1,4 @@
-.DS_Store
 node_modules
-**/node_modules/**
+yarn.lock
 *.log
-coverage/
-test/encrypted/nodejs-docs-samples.json
-*.iml
-.idea/
-key.json
-*/yarn.lock
-.nyc_output
+.yarnclean

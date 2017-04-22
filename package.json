@@ -1,32 +1,19 @@
 {
-  "name": "nodejs-getting-started",
+  "name": "omegaup-toolkit",
   "version": "1.0.0",
-  "description": "End to end sample for running Node.js applications on Google Cloud Platform",
-  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "description": "omegaUp Toolkit",
+  "repository": "https://github.com/rcxr/omegaup-toolkit",
   "private": true,
   "scripts": {
-    "lint": "semistandard \"**/*.js\"",
-    "test": "ava -s -t 30s --tap **/*.test.js | tap-dot",
+    "start": "node app.js",
     "cover": "nyc --cache npm test; nyc report --reporter=html",
-    "e2e": "mocha test/e2e.js -t 1800000"
+    "init-cloudsql": "node books/model-cloudsql.js"
   },
-  "author": "Google Inc.",
+  "author": "rcxr",
   "contributors": [
     {
-      "name": "Jon Wayne Parrott",
-      "email": "jonwayne@google.com"
-    },
-    {
-      "name": "Jonathan Simon",
-      "email": "jbsimon@google.com"
-    },
-    {
-      "name": "Jason Dobry",
-      "email": "jdobry@google.com"
-    },
-    {
-      "name": "Ace Nassri",
-      "email": "anassri@google.com"
+      "name": "Rafa Díaz",
+      "email": "racrux@gmail.com"
     }
   ],
   "license": "Apache-2.0",
@@ -40,39 +27,21 @@
       "it"
     ]
   },
-  "engines": {
-    "node": ">=4.3.2"
-  },
   "dependencies": {
-    "@google-cloud/debug-agent": "~1.0.0",
-    "@google-cloud/trace-agent": "~1.0.4",
-    "@google-cloud/datastore": "~1.0.0",
-    "@google-cloud/storage": "~1.1.0",
-    "@google-cloud/pubsub": "~0.10.0",
-    "async": "~2.3.0",
-    "body-parser": "~1.17.1",
-    "connect-memcached": "~0.2.0",
-    "express": "~4.15.2",
-    "express-session": "~1.15.2",
-    "express-winston": "~2.3.0",
-    "jade": "~1.11.0",
-    "lodash": "~4.17.4",
-    "mongodb": "~2.2.25",
-    "multer": "~1.3.0",
-    "mysql": "~2.13.0",
-    "nconf": "~0.8.4",
-    "passport": "~0.3.2",
-    "passport-google-oauth20": "~1.0.0",
-    "prompt": "~1.0.0",
-    "request": "~2.81.0",
-    "winston": "~2.3.1"
+    "@google-cloud/datastore": "^1.0.0",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "jstransformer": "^1.0.0",
+    "nconf": "^0.8.4",
+    "pug": "^2.0.0-beta.12",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "ava": "~0.19.1",
-    "nodejs-repo-tools": "git+https://git@github.com/GoogleCloudPlatform/nodejs-repo-tools.git",
     "proxyquire": "~1.7.11",
     "sinon": "~2.1.0",
-    "supertest": "~3.0.0",
     "tap-dot": "~1.0.5"
   },
   "engines": {

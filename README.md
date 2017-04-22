@@ -1,60 +1,46 @@
-# Getting started with Node.js on Google Cloud Platform
+# omegaUp Give Tracker
 
-[![Build Status][travis-badge]][travis-link]
-[![Coverage Status][coveralls-badge]][coveralls-link]
+This project contains the code for the Give Tracker app for omegaUp volunteers.
 
-This repository contains the complete sample code for the
-[Node.js Getting Started on Google Cloud Platform][getting-started] tutorials.
-Please refer to the tutorials for instructions on configuring, running, and
-deploying these samples.
+# Simple instructions
 
-The code for each tutorial is in an individual folder in this repository.
+1.  Install [Node.js](https://nodejs.org/en/).
 
-Tutorial | Folder
----------|-------
-[Hello world][step-1] | [1-hello-world][step-1-code]
-[Structured data][step-2] | [2-structured-data][step-2-code]
-[Cloud Storage][step-3] | [3-binary-data][step-3-code]
-[Authenticating users][step-4] | [4-auth][step-4-code]
-[Logging app events][step-5] | [5-logging][step-5-code]
-[Using Cloud Pub/Sub][step-6] | [6-pubsub][step-6-code]
-[Deploying to Google Compute Engine][step-7] | [7-gce][step-7-code]
+1. Install [Yarn](https://yarnpkg.com/).
 
-## Contributing changes
+1.  Install [git](https://git-scm.com/).
 
-* See [CONTRIBUTING.md](CONTRIBUTING.md)
+1.  Create a [Google Cloud Platform project](https://console.cloud.google.com).
 
-### Run the tests
+1.  Install the [Google Cloud SDK](https://cloud.google.com/sdk/).
 
-* Make sure you're authenticated with the gcloud sdk and your gcloud project
-has enabled all the APIs used by these tutorials.
-* Make sure you've got the required environment variables set. (Take a look at
-the various config.js files.)
-* `git clone git@github.com:GoogleCloudPlatform/nodejs-getting-started.git`
-* `cd nodejs-getting-started`
-* `npm install`
-* `npm test`
+    * After downloading the SDK, initialize it:
 
-## Licensing
+            gcloud init
 
-* See [LICENSE](LICENSE)
+1.  Acquire local credentials for authenticating with Google Cloud Platform
+    services:
 
-[travis-badge]: https://travis-ci.org/GoogleCloudPlatform/nodejs-getting-started.svg
-[travis-link]: https://travis-ci.org/GoogleCloudPlatform/nodejs-getting-started
-[coveralls-badge]: https://codecov.io/github/GoogleCloudPlatform/nodejs-getting-started/coverage.svg?branch=master
-[coveralls-link]: https://codecov.io/github/GoogleCloudPlatform/nodejs-getting-started?branch=master
-[getting-started]: http://cloud.google.com/nodejs/getting-started
-[step-1]: https://cloud.google.com/nodejs/getting-started/hello-world
-[step-1-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/1-hello-world
-[step-2]: https://cloud.google.com/nodejs/getting-started/using-structured-data
-[step-2-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/2-structured-data
-[step-3]: https://cloud.google.com/nodejs/getting-started/using-cloud-storage
-[step-3-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/3-binary-data
-[step-4]: https://cloud.google.com/nodejs/getting-started/authenticate-users
-[step-4-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/4-auth
-[step-5]: https://cloud.google.com/nodejs/getting-started/logging-application-events
-[step-5-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/5-logging
-[step-6]: https://cloud.google.com/nodejs/getting-started/using-pub-sub
-[step-6-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/6-pubsub
-[step-7]: https://cloud.google.com/nodejs/getting-started/run-on-compute-engine
-[step-7-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/7-gce
+        gcloud beta auth application-default login
+
+1.  Clone the repository:
+
+        git clone https://github.com/rcxr/omegaup-givetracker.git
+
+1.  Install dependencies using Yarn:
+
+        yarn install
+
+1.  Start the app:
+
+        yarn start
+
+1.  View the app at [http://localhost:8080](http://localhost:8080).
+
+1.  Stop the app by pressing `Ctrl+C`.
+
+1.  Deploy the app:
+
+        gcloud app deploy
+
+1.  View the deployed app at [https://YOUR_PROJECT_ID.appspot.com](https://YOUR_PROJECT_ID.appspot.com).
