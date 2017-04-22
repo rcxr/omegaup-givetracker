@@ -6,7 +6,7 @@ This project contains the code for the Give Tracker app for omegaUp volunteers.
 
 1.  Install [Node.js](https://nodejs.org/en/).
 
-    * Optional: Install [Yarn](https://yarnpkg.com/).
+1. Install [Yarn](https://yarnpkg.com/).
 
 1.  Install [git](https://git-scm.com/).
 

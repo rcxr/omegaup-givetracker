@@ -2,7 +2,7 @@
   "name": "omegaup-toolkit",
   "version": "1.0.0",
   "description": "omegaUp Toolkit",
-  "repository": "https://github.com/rcxr/omegaup-givetracker",
+  "repository": "https://github.com/rcxr/omegaup-toolkit",
   "private": true,
   "scripts": {
     "start": "node app.js",
